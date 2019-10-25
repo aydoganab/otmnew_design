@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Abdullah Aydoğan@Otm</title>
+    <link rel="stylesheet" href="css/otm_newdesign.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!--modal-->
+<div class="modal" tabindex="-1" role="dialog" data-backdrop="static" id="modal">
+    <div class="modal-dialog modal-dialog-centered" role="document" id="modal-dialog">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+</div>
+
+<!--loading-->
+<div id="loading" class="position-fixed dn mt-4" style="left: 50%; z-index: 1080;">
+    <div class="alert alert-success shadow my-0 position-relative font-weight-bold rounded" style="left: -50%">Yükleniyor...</div>
+</div>
+
+<!--toast-->
+<div class="fixed-bottom" id="toast" style="z-index: 1080">
+    <div class="container text-center" id="toast-container"></div>
+</div>
+<div class="toast-success d-none">
+    <div class="alert alert-toast-success shadow d-inline-block alert-dismissible show fade rounded" role="alert">
+        <i class="fa fa-check fa-lg fa-fw"></i> <span class="toast-message">Message</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+</div>
+<div class="toast-danger d-none">
+    <div class="alert alert-toaost-danger shadow d-inline-block alert-dismissible show fade rounded" role="alert">
+        <i class="fa fa-exclamation-circle fa-lg fa-fw"></i> <span class="toast-message">Message</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
+</div>
+
+<!--logout confirm-->
+<div class="d-none" id="logout-confirm">
+    <div class="modal-header">
+        <h5 class="modal-title">Oturumu Kapat</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p class="text-center lead my-2">Oturum kapatılsın mı?</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">İptal</button>
+        <a href="logout.html" class="btn btn-outline-danger">Oturumu Kapat</a>
+    </div>
+</div>
+
+<!--navbar-->
+<nav class="navbar navbar-expand-md navbar-dark bg-navbar">
+    <a class="navbar-brand py-0 text-white" href="#"><i class="fa fa-life-ring"></i>tm</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">ARAŞTIRMA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">KIM 101/101E</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">KIM 101EL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">NMR</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">YÖNETİM</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: .6rem; padding-bottom: .5rem;">
+                        <img src="img/t_abdullah.jpg" alt="" class="rounded-circle" style="height: 33px">
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right my-0" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#"><i class="fa fa-key fa-fw"></i> Şifremi Değiştir</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-user-o fa-fw"></i> Bilgilerimi Güncelle</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link logout" role="button"><i class="fa fa-sign-out fa-lg"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid" id="container-otm">
+    <div class="row justify-content-center">
+        <div class="col-xl-10 col-lg-11 col-md-12 shadow bg-white mt-0 mt-md-2 pt-3 pb-5">
+
+
+            <!--breadcramp-->
+            <nav aria-label="breadcrumb" class="position-relative">
+                <ol class="breadcrumb rounded">
+                    <li class="breadcrumb-item"><a href="#"><i class="fa fa-home fa-lg"></i> <span class="d-none d-sm-inline">Ana Sayfa</span></a></li>
+                    <li class="breadcrumb-item"><a href="#">YÖNETİM</a></li>
+                    <li class="breadcrumb-item d-none d-md-block dropdown">
+                        <a href="#" class="dropdown-toggle" role="button" id="smlink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,4">Diğer İşlemler</a>
+                        <div class="dropdown-menu shadow" aria-labelledby="smlink">
+                            <a class="dropdown-item" href="#">Page</a>
+                            <a class="dropdown-item" href="#">Another page</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="breadcrumb-item active">Menü Grupları Yönetimi</li>
+                    <li class="ml-auto d-none d-md-block dropdown">
+                        <a href="#" title="Bu sayfa hakkında sorun bildir"><i class="fa fa-frown-o fa-lg"></i></a>
+                        <a href="#" class="ml-2" id="pageinfo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,2" data-reference="parent" title="Sayfa bilgileri"><i class="fa fa-info-circle fa-lg"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right text-center border-0 shadow" aria-labelledby="dropdownMenuLink">
+                            <div class="alert alert-primary px-0 my-0">
+                                <h6 class="alert-heading">Sayfa Bilgileri</h6>
+                                <hr class="mt-1">
+                                <p><i class="fa fa-map-marker-alt"></i> kim101-1</p>
+                                <a href="#" class="alert-link">Detaylar</a>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <style>
+                        .img-nmr {
+                            max-height: 132px;
+                        }
+                    </style>
+
+                    <h4 class="page-title">MY NMR HISTORY</h4>
+
+                    <div class="row bg-light mx-0 mb-3 shadow-sm">
+                        <div class="col-sm-4 p-2 bg-secondary justify-content-center d-flex">
+                            <img class="img-fluid bg-light img-nmr" src="img/6BAED1F7-43C9-010E-40CC-E19F0F462D6C.PNG">
+                        </div>
+                        <div class="col-sm-8 p-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h1 class="display-4 text-danger">ABA-101</h1>
+                                <span><i class="fa fa-calendar-o"></i> 11 July 2018</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="font-weight-bold">CDCl3</span>
+                                <span class="badge badge-danger p-2 rounded"><sup>1</sup>H</span>
+                            </div>
+                            <div class="py-2"><samp>SY-09 Experimet</samp></div>
+                            <div class="d-flex justify-content-between align-items-center align-self-end">
+                                <img class="rounded-circle" src="img/t_abdullah.jpg">
+                                <i class="fa fa-check fa-2x text-success"></i>
+                                <i class="fa fa-commenting-o fa-2x"></i>
+                                <span><i class="fa fa-calendar-o"></i> 11 July 2018</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row bg-light mx-0 mb-3 shadow-sm">
+                        <div class="col-sm-4 p-2 bg-secondary justify-content-center d-flex">
+                            <img class="img-fluid bg-light img-nmr" src="img/071D2BA5-23B5-9157-3D3C-09A0F635A5EB.svg">
+                        </div>
+                        <div class="col-sm-8 p-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h1 class="display-4 text-danger">ABA-101</h1>
+                                <span><i class="fa fa-calendar-o"></i> 11 July 2018</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="font-weight-bold">CDCl3</span>
+                                <span class="badge badge-danger p-2 rounded"><sup>1</sup>H</span>
+                            </div>
+                            <div class="py-2"><samp>SY-09 Experimet</samp></div>
+                            <div class="d-flex justify-content-between align-items-center align-self-end">
+                                <img class="rounded-circle" src="img/t_abdullah.jpg">
+                                <i class="fa fa-check fa-2x text-success"></i>
+                                <i class="fa fa-commenting-o fa-2x"></i>
+                                <span><i class="fa fa-calendar-o"></i> 11 July 2018</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('.logout').click(function (e) {
+        e.preventDefault();
+        $('#modal-content').html($('#logout-confirm').html());
+        $('#modal').modal('show');
+    });
+</script>
+
+</body>
+</html>
