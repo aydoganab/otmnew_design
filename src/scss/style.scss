@@ -40,6 +40,7 @@ $btn-focus-width: .1rem;
 $input-focus-width: .1rem;
 $input-btn-focus-width: .1rem;
 $input-placeholder-color:$gray-500;
+$input-border-color: darken($gray-400, 10%);
 
 $navbar-brand-font-size: 2rem;
 $nav-link-padding-y: 1rem;
@@ -211,7 +212,7 @@ nav.nav-otm{
 label {
   @extend label;
   font-weight: 500;
-  font-size: 90%;
+  font-size: 92.85714285%;
   margin-bottom: .1rem;
 }
 
