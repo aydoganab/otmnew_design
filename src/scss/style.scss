@@ -294,20 +294,43 @@ caption{
   }
 }
 
-.table:not(.table-borderless) tbody tr:last-child, .table:not(.table-borderless) tfoot tr:last-child{
-  th{
-    border-bottom: 2px solid $table-border-color;
-  }
-
-  td{
-    border-bottom: 2px solid $table-border-color;
+.table:not(.table-borderless):not(.table-border-bottom-0){
+  tbody, tfoot{
+    tr:last-child{
+      th, td{
+        border-bottom: 2px solid $table-border-color;
+      }
+    }
   }
 }
 
-.table:not(.table-borderless) thead tr{
-  th{
-    border-top: 2px solid $table-border-color;
+.table:not(.table-borderless){
+  thead {
+    tr {
+      th {
+        border-top: 2px solid $table-border-color;
+      }
+    }
   }
+}
+
+.table.table-border-bottom-0 {
+  tbody{
+    tr:last-child{
+      td, th {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  tfoot{
+    tr:last-child{
+      td, th{
+        border-bottom: 0;
+      }
+    }
+  }
+
 }
 
 
