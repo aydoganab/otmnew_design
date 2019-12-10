@@ -74,10 +74,6 @@ $modal-transition: transform .1s ease-out;
 //$modal-xl: 1600px;
 
 $blockquote-font-size: 1rem;
-blockquote{
-  padding-left: 0.5rem;
-  border-left: 4px solid $gray-500;
-}
 
 //$alert-bg-level:                    -6;
 //$alert-border-level:                -5;
@@ -138,6 +134,11 @@ $theme-colors: (
 //.bg-navbar{
 //background: linear-gradient(45deg,#00ae7b,#0081bf);
 //}
+
+blockquote{
+  padding-left: 0.5rem;
+  border-left: 4px solid $gray-500;
+}
 
 .navbar-otm{
   background-color: $white;
@@ -396,6 +397,23 @@ caption{
   @extend .shadow;
 }
 
+.card-sm{
+  .card-body{
+    padding: 0.5rem;
+  }
+
+  .card-title{
+    margin-bottom: 0.5rem;
+  }
+
+  .card-subtitle {
+    margin-top: -0.3rem;
+  }
+
+  .card-header, .card-footer{
+    padding: 0.5rem 0.5rem;
+  }
+}
 
 .card-columns {
   @include media-breakpoint-only(sm) {
