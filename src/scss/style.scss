@@ -6,7 +6,7 @@
 //@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin-ext');
 
 // stylelint-disable
-$white:    #fff;
+$white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -16,7 +16,7 @@ $gray-600: #6c757d;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black:    #000;
+$black: #000;
 
 $enable-rounded: true;
 $enable-responsive-font-sizes: true;
@@ -39,7 +39,7 @@ $display4-size: 1.5rem;
 $btn-focus-width: .1rem;
 $input-focus-width: .1rem;
 $input-btn-focus-width: .1rem;
-$input-placeholder-color:$gray-500;
+$input-placeholder-color: $gray-500;
 $input-border-color: darken($gray-400, 10%);
 
 $navbar-brand-font-size: 2rem;
@@ -50,16 +50,16 @@ $navbar-padding-y: 0;
 //$navbar-dark-hover-color: yellow;
 //$navbar-dark-active-color: yellow;
 
-$navbar-light-color:$gray-700;
-$navbar-light-hover-color:$gray-800;
-$navbar-light-active-color:$gray-800;
+$navbar-light-color: $gray-700;
+$navbar-light-hover-color: $gray-800;
+$navbar-light-active-color: $gray-800;
 
 $dropdown-padding-y: 0;
 $dropdown-item-padding-y: .5rem;
 $dropdown-border-color: $gray-400;
 $dropdown-link-hover-bg: $gray-100;
 
-$breadcrumb-padding-y:.714rem;
+$breadcrumb-padding-y: .714rem;
 $breadcrumb-bg: $gray-300;
 
 //$link-color: #398acd;
@@ -85,14 +85,14 @@ $blockquote-font-size: 1rem;
 @import "../../node_modules/bootstrap/scss/mixins";
 
 $theme-colors: (
-        "primary":    $primary,
-        "secondary":  $secondary,
-        "success":    $teal,
-        "info":       $info,
-        "warning":    $warning,
-        "danger":     $danger,
-        "light":      $light,
-        "dark":       $dark
+        "primary": $primary,
+        "secondary": $secondary,
+        "success": $teal,
+        "info": $info,
+        "warning": $warning,
+        "danger": $danger,
+        "light": $light,
+        "dark": $dark
 );
 
 // Optional
@@ -135,29 +135,29 @@ $theme-colors: (
 //background: linear-gradient(45deg,#00ae7b,#0081bf);
 //}
 
-blockquote{
+blockquote {
   padding-left: 0.5rem;
   border-left: 4px solid $gray-500;
 }
 
-.navbar-otm{
+.navbar-otm {
   background-color: $white;
   margin-right: -10px;
   margin-left: -10px;
   @extend .font-weight-bold;
   @extend .text-dark;
 
-  .nav-link{
-    &:hover{
+  .nav-link {
+    &:hover {
       background-color: $gray-200;
     }
 
-    &.active{
+    &.active {
       background-color: $gray-300;
     }
   }
 
-  .dropdown.show{
+  .dropdown.show {
     background-color: $gray-200;
   }
 
@@ -168,7 +168,7 @@ blockquote{
 
 //}
 
-nav.nav-otm{
+nav.nav-otm {
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -179,14 +179,14 @@ nav.nav-otm{
   position: relative;
 }
 
-.custom-control-label::after{
+.custom-control-label::after {
   @extend .custom-control-label::after;
   background-position: 2px 2px;
   background-size: 75% 75%;
   background-repeat: no-repeat;
 }
 
-.close{
+.close {
   @extend .close;
   text-shadow: none;
 }
@@ -198,15 +198,15 @@ nav.nav-otm{
   @extend .pt-2;
 }
 
-.invalid-tooltip{
+.invalid-tooltip {
   @extend .invalid-tooltip;
   padding: .3rem;
   margin-top: 0;
-  background-color: rgba(220,53,69,0.8);
+  background-color: rgba(220, 53, 69, 0.8);
   border-radius: 0;
 }
 
-.flex-truncate-con{
+.flex-truncate-con {
   min-width: 0;
 }
 
@@ -217,16 +217,16 @@ label {
   margin-bottom: .1rem;
 }
 
-.form-check, .custom-checkbox, .custom-radio, .custom-switch{
-  label{
+.form-check, .custom-checkbox, .custom-radio, .custom-switch {
+  label {
     font-weight: 400;
     font-size: 1rem;
     //padding-top: 2px;
   }
 }
 
-.abc-checkbox, .abc-radio{
-  label{
+.abc-checkbox, .abc-radio {
+  label {
     font-size: 1rem;
     //padding-top: 2px;
   }
@@ -236,76 +236,76 @@ label {
   @extend .alert-success;
   @extend .pl-3;
   //border-radius: 4rem !important;
-  background-color: lighten(theme-color("success"),30%);
-  border-color: lighten(theme-color("success"),20%);
+  background-color: lighten(theme-color("success"), 30%);
+  border-color: lighten(theme-color("success"), 20%);
 }
 
 .alert-toaost-danger {
   @extend .alert-danger;
   @extend .pl-3;
   //border-radius: 4rem !important;
-  background-color: lighten(theme-color("danger"),20%);
-  border-color: lighten(theme-color("danger"),19%);
+  background-color: lighten(theme-color("danger"), 20%);
+  border-color: lighten(theme-color("danger"), 19%);
 }
 
-caption{
+caption {
   @extend caption;
   caption-side: top;
 }
 
-.dn{
+.dn {
   display: none;
 }
 
 .table.table-td-middle {
-  th, td{
+  th, td {
     vertical-align: middle;
   }
 }
 
-.table.table-hover-td{
-  tbody{
-    td:hover{
+.table.table-hover-td {
+  tbody {
+    td:hover {
       background-color: $gray-200;
     }
   }
 }
 
-@each $color, $value in $theme-colors{
+@each $color, $value in $theme-colors {
   .td-hover-#{$color} {
-    &:hover{
+    &:hover {
       @extend .table-#{$color};
       @extend .curser-pointer;
     }
   }
 }
 
-@each $color, $value in $theme-colors{
+@each $color, $value in $theme-colors {
   .border-hover-#{$color} {
-    &:hover{
+    &:hover {
       @extend .border-#{$color};
     }
   }
 }
 
 
-.table.table-curser-pointer tbody{
-  tr{
+.table.table-curser-pointer tbody {
+  tr {
     cursor: pointer;
   }
 }
 
-.table:not(.table-borderless):not(.table-border-bottom-0){
-  tbody, tfoot{
-    tr:last-child{
-      th, td{
+.table:not(.table-borderless):not(.table-border-bottom-0) {
+  tbody, tfoot {
+    tr:last-child {
+      th, td {
         border-bottom: 2px solid $table-border-color;
       }
     }
   }
 }
 
-.table:not(.table-borderless){
+.table:not(.table-borderless) {
   thead {
     tr {
       th {
@@ -316,24 +316,23 @@ caption{
 }
 
 .table.table-border-bottom-0 {
-  tbody{
-    tr:last-child{
+  tbody {
+    tr:last-child {
       td, th {
         border-bottom: 0;
       }
     }
   }
 
-  tfoot{
-    tr:last-child{
-      td, th{
+  tfoot {
+    tr:last-child {
+      td, th {
         border-bottom: 0;
       }
     }
   }
 
 }
-
 
 
 .curser-pointer {
@@ -368,11 +367,12 @@ caption{
 .btn-icon {
   @extend .btn-circle;
   position: relative;
-  color: lighten($gray-700, 5%);
+  color: $gray-800;
   z-index: 0;
 
   &::before {
     border-radius: 50%;
+    border: 1px solid $gray-300;
     content: '';
     opacity: 0;
     position: absolute;
@@ -384,18 +384,25 @@ caption{
     right: 0;
     top: 0;
     color: $black;
-    background-color: $gray-200;
+    background-color: $gray-300;
     transform: scale(0);
     transition-property: transform, opacity;
   }
 
-  &:hover::before {
+  &:hover::before, &.active::before {
     opacity: 1;
     transform: scale(1);
   }
+
+  &:focus, &.focus {
+    outline: 0;
+    background-color: $gray-300;
+    box-shadow: 0 0 0 0.1rem rgba(130, 138, 145, .3);
+  }
+
 }
 
-.btn-icn-sm {
+.btn-icon-sm {
   @extend .btn-icon;
   width: 28px;
   height: 28px;
@@ -409,31 +416,31 @@ caption{
   font-size: 1.25rem;
 }
 
-.border-2{
+.border-2 {
   border-width: 2px;
 }
 
-.dropdown-toggle-nocaret{
-  &:before{
+.dropdown-toggle-nocaret {
+  &:before {
     display: none;
   }
 
-  &:after{
+  &:after {
     display: none;
   }
 }
 
-.rounded-top-0{
+.rounded-top-0 {
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
 
-.rounded-bottom-0{
+.rounded-bottom-0 {
   border-bottom-left-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
 }
 
-.medium{
+.medium {
   font-size: 90%;
 }
 
@@ -441,12 +448,12 @@ caption{
   @extend .shadow;
 }
 
-.card-sm{
-  .card-body{
+.card-sm {
+  .card-body {
     padding: 0.5rem;
   }
 
-  .card-title{
+  .card-title {
     margin-bottom: 0.5rem;
   }
 
@@ -454,7 +461,7 @@ caption{
     margin-top: -0.3rem;
   }
 
-  .card-header, .card-footer{
+  .card-header, .card-footer {
     padding: 0.5rem 0.5rem;
   }
 }
@@ -474,7 +481,7 @@ caption{
   }
 }
 
-html{
+html {
   @extend html;
   font-size: 14px;
 }
@@ -493,6 +500,6 @@ $font-family-icon: "Font Awesome 5 Free";
 $fa-var-check: "\f00c";
 $abcfa-font-weight: 900;
 @import "../../node_modules/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.scss";
-.abc-checkbox input[type="checkbox"]:checked+label:after, .abc-checkbox input[type="radio"]:checked+label:after{
+.abc-checkbox input[type="checkbox"]:checked + label:after, .abc-checkbox input[type="radio"]:checked + label:after {
   font-weight: $abcfa-font-weight;
 }
