@@ -230,7 +230,7 @@ label {
 .abc-checkbox, .abc-radio{
   label{
     font-size: 1rem;
-    padding-top: 2px;
+    //padding-top: 2px;
   }
 }
 
@@ -362,6 +362,50 @@ caption{
 
 .btn-circle-lg {
   @extend .btn-circle;
+  width: 42px;
+  height: 42px;
+  font-size: 1.25rem;
+}
+
+.btn-icon {
+  @extend .btn-circle;
+  position: relative;
+  color: lighten($gray-700, 5%);
+  z-index: 0;
+
+  &::before {
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    position: absolute;
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: $black;
+    background-color: $gray-200;
+    transform: scale(0);
+    transition-property: transform, opacity;
+  }
+
+  &:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.btn-icn-sm {
+  @extend .btn-icon;
+  width: 28px;
+  height: 28px;
+  font-size: .8rem;
+}
+
+.btn-icon-lg {
+  @extend .btn-icon;
   width: 42px;
   height: 42px;
   font-size: 1.25rem;
