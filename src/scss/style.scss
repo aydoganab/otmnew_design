@@ -404,16 +404,29 @@ caption {
 
 .btn-icon-sm {
   @extend .btn-icon;
-  width: 28px;
-  height: 28px;
-  font-size: .8rem;
+  @extend .btn-circle-sm;
 }
 
 .btn-icon-lg {
   @extend .btn-icon;
-  width: 42px;
-  height: 42px;
-  font-size: 1.25rem;
+  @extend .btn-circle-lg;
+}
+
+.btn-icon-link {
+  @extend .btn-icon;
+  color: $link-color;
+
+  &:before {
+    color: $link-hover-color;
+    background-color: lighten($link-color, 40%);
+    border-color: lighten($link-color, 40%);
+  }
+
+  &:focus, &.focus {
+    outline: 0;
+    background-color: lighten($link-color, 40%);
+    box-shadow: 0 0 0 0.1rem rgba(26, 115, 232, 0.23);
+  }
 }
 
 .border-2 {
