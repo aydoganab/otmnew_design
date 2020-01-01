@@ -494,6 +494,10 @@ caption {
   }
 }
 
+.samp {
+  @extend samp;
+}
+
 html {
   @extend html;
   font-size: 14px;
