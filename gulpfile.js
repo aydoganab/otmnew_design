@@ -13,7 +13,9 @@ gulp.task('sass', function() {
     return gulp.src('src/scss/*.scss')
         .pipe(sass())
         .pipe(autoprefixer({browserlist: ["last 2 version", "> 1%", "maintained node versions", "not dead"]}))
-        .pipe(csso())
+        .pipe(csso({
+            comments:false
+        }))
         .pipe(rename(project_css_file))
         .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
