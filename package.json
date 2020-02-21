@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/aydoganab/otmnew_design#readme",
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0",
+    "@fortawesome/fontawesome-free": "^5.12.1",
     "awesome-bootstrap-checkbox": "^1.0.1",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
@@ -30,6 +30,6 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.0"
+    "popper.js": "^1.16.1"
   }
 }
