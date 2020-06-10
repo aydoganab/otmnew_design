@@ -349,12 +349,14 @@ caption {
   @extend .p-0;
   width: 36px;
   height: 36px;
+  min-width: 36px;
 }
 
 .btn-circle-sm {
   @extend .btn-circle;
   width: 28px;
   height: 28px;
+  min-width: 28px;
   font-size: .8rem;
 }
 
@@ -362,6 +364,7 @@ caption {
   @extend .btn-circle;
   width: 42px;
   height: 42px;
+  min-width: 42px;
   font-size: 1.25rem;
 }
 
