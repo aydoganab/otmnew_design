@@ -511,6 +511,26 @@ html {
   font-size: 14px;
 }
 
+//google type hover color buttons
+.btn-flat {
+  @extend .btn;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-flat-#{$color} {
+    color: $value;
+    &:hover{
+      color: darken($value, 5%);
+      background-color: rgba($value, 0.07);
+    }
+
+    &:focus{
+      background-color: rgba($value, 0.2);
+      border-color: rgba($value, 0.2);
+      box-shadow: 0 0 0 0.1rem rgba($value, 0.22);;
+    }
+  }
+}
 
 //fontawesome 5
 $fa-font-path: "fonts";
