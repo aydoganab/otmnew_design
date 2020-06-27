@@ -17,6 +17,8 @@ $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
+$green-google: #00796b;
+$info-google: #39c0ed;
 
 $enable-rounded: true;
 $enable-responsive-font-sizes: true;
@@ -76,6 +78,8 @@ $modal-transition: transform .1s ease-out;
 
 $blockquote-font-size: 1rem;
 
+$tooltip-arrow-color: $white;
+
 //$alert-bg-level:                    -6;
 //$alert-border-level:                -5;
 //$alert-color-level:                 6;
@@ -88,8 +92,8 @@ $blockquote-font-size: 1rem;
 $theme-colors: (
         "primary": $primary,
         "secondary": $secondary,
-        "success": $teal,
-        "info": $info,
+        "success": lighten($green-google, 7%),
+        "info": darken($info-google, 7%),
         "warning": $warning,
         "danger": $danger,
         "light": $light,
