@@ -78,7 +78,7 @@ $modal-transition: transform .1s ease-out;
 
 $blockquote-font-size: 1rem;
 
-$tooltip-arrow-color: $white;
+$tooltip-arrow-color: rgba($white, 0);
 
 //$alert-bg-level:                    -6;
 //$alert-border-level:                -5;
@@ -512,13 +512,10 @@ html {
 }
 
 //google type hover color buttons
-.btn-flat {
-  @extend .btn;
-}
-
 @each $color, $value in $theme-colors {
   .btn-flat-#{$color} {
     color: $value;
+    font-weight: 500;
     &:hover{
       color: darken($value, 5%);
       background-color: rgba($value, 0.07);
@@ -526,8 +523,8 @@ html {
 
     &:focus{
       background-color: rgba($value, 0.2);
-      border-color: rgba($value, 0.2);
-      box-shadow: 0 0 0 0.1rem rgba($value, 0.22);;
+      border-color: rgba($value, 0);
+      box-shadow: 0 0 0 0.1rem rgba($value, 0.25);;
     }
   }
 }
