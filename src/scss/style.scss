@@ -244,17 +244,21 @@ label {
 .alert-toast-success {
   @extend .alert-success;
   @extend .pl-3;
+  @extend .pr-2;
   //border-radius: 4rem !important;
-  background-color: lighten(theme-color("success"), 30%);
-  border-color: lighten(theme-color("success"), 20%);
+  background-color: lighten(theme-color("success"), 13%);
+  border-color: lighten(theme-color("success"), 12%);
+  color: darken(theme-color("success"), 15%);
 }
 
 .alert-toaost-danger {
   @extend .alert-danger;
   @extend .pl-3;
+  @extend .pr-2;
   //border-radius: 4rem !important;
   background-color: lighten(theme-color("danger"), 20%);
   border-color: lighten(theme-color("danger"), 19%);
+  color: #000;
 }
 
 caption {
