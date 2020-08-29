@@ -233,10 +233,15 @@ label {
 .abc-checkbox, .abc-radio {
   label {
     font-size: 1rem;
-    //padding-top: 2px;
+    padding-top: 1px;
   }
   input:focus+label::before{
     outline: none !important;
+  }
+  &:hover{
+    label:before{
+      border-color: $gray-800;
+    }
   }
 }
 
