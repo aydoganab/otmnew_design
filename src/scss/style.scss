@@ -454,14 +454,8 @@ caption {
   border-width: 2px !important;
 }
 
-.dropdown-toggle-nocaret {
-  &:before {
+.dropdown-toggle-nocaret:after {
     display: none;
-  }
-
-  &:after {
-    display: none;
-  }
 }
 
 .rounded-top-0 {
