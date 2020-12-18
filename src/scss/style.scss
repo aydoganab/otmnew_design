@@ -482,6 +482,14 @@ caption {
   @extend .shadow;
 }
 
+.shadow-hover-sm:hover{
+  @extend .shadow-sm;
+}
+
+.shadow-hover-lg:hover{
+  @extend .shadow-lg;
+}
+
 .card-sm {
   .card-body {
     padding: 0.5rem;
