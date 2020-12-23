@@ -544,6 +544,25 @@ html {
   }
 }
 
+//modal fullscreen
+.modal-fullscreen{
+  width: 100vw;
+  max-width: none;
+  height: 100%;
+  margin: 0;
+
+  .modal-content{
+    height: 100%;
+    border:0;
+    border-radius: 0;
+
+    .modal-body{
+      overflow-y: auto;
+    }
+  }
+
+}
+
 //fontawesome 5
 $fa-font-path: "fonts";
 $fa-font-size-base: 1rem;
