@@ -563,15 +563,6 @@ html {
 
 }
 
-//zomable elements
-.zoomable{
-  transition: transform .2s;
-  &:hover{
-    z-index: 1;
-    transform: scale(1.5);
-  }
-}
-
 //fontawesome 5
 $fa-font-path: "fonts";
 $fa-font-size-base: 1rem;
