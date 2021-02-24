@@ -24,7 +24,7 @@ gulp.task('sass', function() {
 //copy fa fonts
 gulp.task('fa', function () {
     return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-        .pipe(gulp.dest("src/css/fonts"))
+        .pipe(gulp.dest("src/fonts"))
         .pipe(browserSync.stream());
 });
 
